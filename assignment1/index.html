@@ -114,7 +114,7 @@ a,a,a,a,a,a,a,a,a,a,a,a,a,a,0,a
 NAME Silverware Room
 ITM 3 12,4
 EXT 0,5 2 15,5
-EXT 14,15 4 14,0
+EXT 14,15 4 14,0 DLG h
 PAL 0
 
 ROOM 4
@@ -620,6 +620,17 @@ NAME locked exit 5
 DLG j
 Congrats! you made food and you can now eat!
 NAME ending 1
+
+DLG k
+"""
+{
+  - {item "3"} >= 1 ?
+    {property locked false}The key opens the door!
+  - else ?
+    {property locked true}The door is locked...
+}
+"""
+NAME locked exit 6
 
 VAR a
 42
