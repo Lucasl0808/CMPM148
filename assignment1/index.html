@@ -135,7 +135,7 @@ ROOM 4
 0,0,0,0,0,a,0,0,g,0,h,i,0,k,0,a
 0,0,0,0,0,a,a,a,a,a,a,a,a,a,a,a
 NAME Final Room
-EXT 14,0 3 14,15 DLG h
+EXT 14,0 3 14,15
 END j 8,13
 PAL 0
 
@@ -631,6 +631,17 @@ DLG k
 }
 """
 NAME locked exit 6
+
+DLG l
+"""
+{
+  - {item "3"} >= 1 ?
+    {property locked false}You have everything you need!
+  - else ?
+    {property locked true}You still need something to eat on!
+}
+"""
+NAME locked exit 7
 
 VAR a
 42
