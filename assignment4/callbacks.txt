@@ -1,0 +1,12 @@
+Callbacks:
+
+1, greeting bullies at the front + interaction/dialogue changes
+2, talking with Kevin about bully interactions
+3, nested dialogue options
+4, teacher dialogue about first option
+5, dodgeball game options and teammate dialogue
+6, post dodgeball dialogue with Kevin about the game outcome
+7, bully interaction about dodgeball game outcome
+8, response to bully interaction and dodgeball game outcome
+9, confronting bullies and protecting Kevin, options dependent on first trait and previous choice in dialogue
+10, last dialogue about the outcome of the previous interaction.

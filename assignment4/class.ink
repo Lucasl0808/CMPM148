@@ -5,22 +5,27 @@ Teacher 1: late again aren't you, well I don't know what else I should expect at
 
 *"sorry I got caught up in something"
     Teacher 1: It better be important, you missed a lesson thats going to be on the final.
+    ~teach = true
 *"yeah my bad I was busy getting bullied"
     Teacher 1: Well if you are getting bullied you should refer to staff or the health office. You shouldn't be missing class.
+    ~teach = true
 *{charisma}"don't worry about me teach. I'll be sure to spend more time on this module and catch up"
     Teacher 1: as long as you don't fall too far behind for the final. I trust that you'll put in the work
 -
 {strength:
     Teacher 1: you should be spending more time studying rather than working out.
+    ~teach = true
 }
 {intelligence:
     Teacher 1: try to show up late next time, even though you probably already know how to do this stuff
 }
 {courage:
     Teacher 1: and stop trying to act cool all the time, it doesn't always work out
+    ~teach = true
 }
 {leader:
     Teacher 1: even if people respect you, if you can't do anything with your life it won't amount to anything
+    ~teach = true
 }
 
 
@@ -30,7 +35,7 @@ Kevin: yo how was class?
 
 *"same old, same old. didn't really do anything again"
     Kevin: thats how it is usually. just can't wait for lunch right?
-*"kinda sucked, teach ripped into me for being late again"
+*{teach}"kinda sucked, teach ripped into me for being late again"
     Kevin: cmon now you're used to it right? I mean being late to first period is kinda your specialty
     **"shut up man its not even my fault"
         Kevin: haha just jokes man ill see you at lunch
