@@ -52,20 +52,33 @@ display: inline-block"></div>
   </div>
 </div>
 
-
+<style>
+  table {
+      border-collapse: collapse;
+  }
+  
+  td {
+      padding: 5px;
+  }
+</style>
 <!-- delete the following 2 panels if you structuring with sequential stages -->
-  <div class="panel"  id="cool">
-    <h1> Delivery time!</h1>
-    <tr>
-    
-      <td><canvas width=500 height=500 style="background-color:black;" id="cooler" onload="runDeliveryMiniGame()"> </canvas> </td>
-    
-    </tr>
-    <br>
-    <tr>
-      <td> Deliveries Completed: </td><td class="deliveries"></td>
-    </tr>
-  </div>
+<div class="panel" id="cool">
+  <h1>Delivery time!</h1>
+  <table>
+      <tr>
+          <td>Use arrow keys to deliver lemonade to the yellow location!</td>
+      </tr>
+      <tr>
+          <td>Deliveries Completed:</td>
+          <td class="deliveries"></td>
+      </tr>
+      <tr>
+          <td>
+              <canvas width="500" height="500" style="background-color:black;" id="cooler" onload="runDeliveryMiniGame()"></canvas>
+          </td>
+      </tr>
+  </table>
+</div>
 
   <div class="panel"  id="panel3">
     <h1> Panel 3 </h1>

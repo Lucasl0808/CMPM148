@@ -73,6 +73,7 @@ const GameInstance = class {
   
   deliveryComplete(){
     this.deliveries += 1;
+    this.reputation += 3;
     this.updateDisplay();
   }
   working(){

@@ -26,6 +26,7 @@ function runDeliveryMinigame(){
     if(dist(z, y, startx, starty) < 20){
         caught = true;
         game.deliveryComplete();
+        io.appendIntoElement("Delivery Completed!", "reports")
         reset();
     }
 
@@ -57,19 +58,19 @@ function reset(){
 
 function move(e){
     if(e.keyCode == '38'){
-        y -= 3;
+        y -= 6;
         reset();
     }
     if(e.keyCode == '40'){
-        y += 3;
+        y += 6;
         reset();
     }
     if(e.keyCode == '37'){
-        z -= 3;
+        z -= 6;
         reset();
     } 
     if(e.keyCode == "39"){
-        z += 3;
+        z += 6;
         reset();
     }
 }
