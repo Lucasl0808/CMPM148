@@ -1,0 +1,88 @@
+<!DOCTYPEhtml><head>
+<title> Lemonade Hustler</title>
+
+
+<script src="jquery-1.11.2.min.js"></script>
+<script src="input_output.js"></script>
+<script src="mathUtil.js"></script>
+<script src="deliveryMinigame.js"></script>
+<script src="narrativeManager.js"></script>
+<script src="incremental.js"></script>
+<script src="statAnalysis.js"></script>
+
+<style>
+.selected {
+  color: red;
+  background-color: #beef
+}
+
+</style>
+
+
+</head>
+<body>
+<div class="stage" id="stage1" style="z-index: 1"> 
+
+
+<h1> <span id=era>Lemon Picker</span></h1> 
+
+<div id="reports" style="overflow-y: scroll; 
+border: 1px solid black; 
+height: 100px; 
+width: 50%;
+display: inline-block"></div>
+
+<br>
+  <button onclick=game.swichPanels("lemon") id="showLemon"> The Stand</button>
+  <button onclick=game.swichPanels("cool") id="showCool"> Cool off!</button>
+  <button onclick=game.swichPanels("panel3") id="showPanel3"> 3</button>
+
+  <div class="panel" id="lemon"> 
+  <table>
+    <tr> <td>
+    <table>
+    <tr><td> Current Money: $</td> <td> </td> <td class="moneyValue"></td><td> Reputation: </td><td class="rep"></td></tr>
+    <tr><td> Lemons</td> <td> </td> <td class="lemons"></td><td><button onclick=game.pickLemons()> Pick lemons </button></td></tr>
+    <tr id="resource2Row"><td> Lemonades Sold</td> <td></td> <td class="lemonade"></td><td><button onclick=game.sellLemonade()> Sell Lemonade</button></td><td>Cost 5 Lemons; Current Price = $</td><td class="price"></td><td><button onclick=game.increasePrice()> Increase Price</button></td><td><button onclick=game.decreasePrice()> Decrease Price</button></td></tr>
+    <tr id="resource3Row"><td> Workers Hired: </td> <td></td> <td class="worker"></td><td><button onclick=game.hireWorker()> Hire Worker</button></td><td>Costs $10; Need to pay workers $17 every 6 secs</td></tr>
+    </table>
+
+    </td></tr>
+  </table>
+  </div>
+</div>
+
+
+<!-- delete the following 2 panels if you structuring with sequential stages -->
+  <div class="panel"  id="cool">
+    <h1> Delivery time!</h1>
+    <tr>
+    
+      <td><canvas width=500 height=500 style="background-color:black;" id="cooler" onload="runDeliveryMiniGame()"> </canvas> </td>
+    
+    </tr>
+    <br>
+    <tr>
+      <td> Deliveries Completed: </td><td class="deliveries"></td>
+    </tr>
+  </div>
+
+  <div class="panel"  id="panel3">
+    <h1> Panel 3 </h1>
+  </div>
+  
+
+<!-- delete the following 2 stages if you are only doing panels -->
+<div class="stage" id="winner" style="z-index: 1"> 
+  <h1>You are rich!</h1>
+  <h2>You have turned your lemonade business into something great, and have become rich</h2>
+</div>
+
+<div class="stage" id="gameOver" style="z-index: 1"> 
+  <h1>Game Over</h1>
+  <h2>Your Reputation fell too low for people to want to buy from you</h2>
+</div>
+
+
+</body>
+</html>
